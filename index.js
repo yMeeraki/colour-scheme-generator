@@ -1,14 +1,12 @@
-fetch("https://www.thecolorapi.com/scheme?hex=0047AB&mode=analogic&count=5")
-  .then((res) => res.json())
-  .then((data) => console.log(data));
+let allColors = [];
 
-const colorCountainer = document.querySelector("#color-section-container");
-
-function colorDOM() {
-  return `<div>
-          <div class="color red"></div>
-          <div class="hex-color">#ffff</div>
-        </div>`;
+function colorDOM(color) {
+  return `
+    <div>
+      <div class="color" style="background:${color.hex.value}"></div>
+      <div class="hex-color">${color.hex.value}</div>
+    </div>
+  `;
 }
 
 document
@@ -21,6 +19,14 @@ document
 function gettingColorsAPI() {
   const color = document.querySelector("#color").value.slice(1);
   const mode = document.querySelector("#mode-select").value;
-  console.log(color, mode);
-  fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode}&count=5`);
+  let html = "";
+  fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode}&count=5`)
+    .then((res) => res.json())
+    .then((data) => {
+      allColors = data.colors;
+      allColors.forEach((color) => {
+        html += colorDOM(color);
+      });
+      document.querySelector("#color-section-container").innerHTML = html;
+    });
 }
