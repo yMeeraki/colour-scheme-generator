@@ -21,7 +21,7 @@ main {
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
-  box-shadow: 0em .5em .5em 0em #19145d;
+  box-shadow: 0em 0.5em 0.5em 0em #19145d;
 }
 
 form {
@@ -47,6 +47,15 @@ select {
   letter-spacing: 0%;
   height: 3em;
   border-radius: 0.375em;
+}
+
+select option{
+    font-weight: 100;
+}
+
+select option:checked {
+    font-weight: 800;
+    text-decoration: underline;
 }
 
 button {
