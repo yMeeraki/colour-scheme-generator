@@ -12,8 +12,8 @@ body {
 }
 
 main {
-  max-width: 40em;
-  max-height: 40em;
+  width: 30em;
+  height: 30em;
   background: #1f2937;
   border-radius: .5em;
   display: flex;
@@ -24,4 +24,11 @@ form {
   padding: 1em 0.5em;
   display: flex;
   align-items: center;
+  gap: .75em;
 }
+
+input[type="color"]{
+    width: 4em;
+    height: 3em;
+}
+
