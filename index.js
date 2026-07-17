@@ -10,3 +10,17 @@ function colorDOM() {
           <div class="hex-color">#ffff</div>
         </div>`;
 }
+
+document
+  .querySelector("#select-color")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    gettingColorsAPI();
+  });
+
+function gettingColorsAPI() {
+  const color = document.querySelector("#color").value.slice(1);
+  const mode = document.querySelector("#mode-select").value;
+  console.log(color, mode);
+  fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode}&count=5`);
+}
