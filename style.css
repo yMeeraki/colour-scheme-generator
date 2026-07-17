@@ -21,7 +21,7 @@ main {
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 1px 2px 0px #0000000d;
+  box-shadow: 0em .5em .5em 0em #19145d;
 }
 
 form {
