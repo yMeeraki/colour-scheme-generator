@@ -32,7 +32,7 @@ form {
 
 input[type="color"] {
   width: 4em;
-  height: 2.5em;
+  height: 3em;
 }
 
 select {
@@ -44,4 +44,21 @@ select {
   color: #d5d4d8;
   line-height: 1.5em;
   letter-spacing: 0%;
+  height: 3em;
+  border-radius: 0.375em;
+}
+
+button {
+  font-family: inherit;
+  height: 3em;
+  border-radius: 4px;
+  border: none;
+  background: #3d4b60;
+  color: #d5d4d8;
+  font-weight: 500;
+  font-size: 0.75em;
+  line-height: 1em;
+  letter-spacing: 0%;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  padding: .8em;
 }
