@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #fffdfe;
+  font-family: "Inter", sans-serif;
 }
 
 main {
@@ -29,7 +32,7 @@ form {
 
 input[type="color"] {
   width: 4em;
-  height: 3em;
+  height: 2.5em;
 }
 
 select {
@@ -39,7 +42,6 @@ select {
   padding: 0.5em 0.8em;
   flex: 1;
   color: #d5d4d8;
-  font-family: Inter;
   line-height: 1.5em;
   letter-spacing: 0%;
 }
